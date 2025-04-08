@@ -1,4 +1,5 @@
 // 7.1
+//7.1
 
 const exams = [
     {name: 'Yuyu Cabeza Crack', score: 5}, 
@@ -12,4 +13,30 @@ const exams = [
     {name: 'Robert Kiyosaki', score: 2},
     {name: 'Keanu Reeves', score: 10}
 ];
+
+
+const suma = exams.reduce((total, actor) => total + actor.score, 0);
+
+console.log(suma);
+
+// 7.2
+
+const aproved = exams.reduce((total, actor) => {
+    if (actor.score >= 5) {
+        total += actor.score
+    }
+    return total;
+},0)
+
+console.log(aproved);
+
+//7.3
+
+const media = exams.reduce((total, actor) => total += (actor.score), 0) / exams.length;
+
+console.log(media);
+
+
+
+
 
